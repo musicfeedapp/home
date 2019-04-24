@@ -1,0 +1,379 @@
+/*//////////////////////////////
+
+    Custom CSS directives
+
+//////////////////////////////*/
+
+html, body {
+    min-width: 0;
+    height: 100%;
+    .antialiased;
+}
+
+body {
+    font-weight: 300;
+    
+    /*// background-color: @brand-green;
+    background: rgb(0,255,157);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,255,157,1) 1%, rgba(0,178,110,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,rgba(0,255,157,1)), color-stop(100%,rgba(0,178,110,1)));
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,255,157,1) 1%,rgba(0,178,110,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,255,157,1) 1%,rgba(0,178,110,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,255,157,1) 1%,rgba(0,178,110,1) 100%);
+    background: radial-gradient(ellipse at center,  rgba(0,255,157,1) 1%,rgba(0,178,110,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff9d', endColorstr='#00b26e',GradientType=1 );
+    */
+
+    // &.home { background: @gray-lightest; }
+
+    &.phone, &.phone-5, &.phone-4 { background: @gray-lighter; }
+    &.phone-dark, &.phone-5-dark, &.phone-4-dark { background: @gray-dark; }
+}
+
+a {
+    .lh-transition( color @reflex @ease );
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.enable-hardware-acceleration {
+    .lh-transform( translate3d(0,0,0) );
+    .lh-backface-visibility( hidden );
+}
+
+
+
+//``````````````````````````````
+//  Branding
+//
+.brand-size( @brand-size ) {
+    left: @brand-size * .7;
+    top: @brand-size * .7;
+    height: @brand-size;
+
+    #app-icon {
+        width: @brand-size;
+        height: @brand-size;
+    }
+
+    #app-name {
+        font-size: @brand-size / 2;
+        line-height: @brand-size;
+    }
+}
+.brand-type {
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+    letter-spacing: -.033em;
+}
+#brand {
+    position: absolute;
+    z-index: 30;
+    .brand-size( 50px );
+
+    #app-icon, #app-name {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #app-icon {
+        // background: url('../images/musicfeed-app-icon-2014.svg') no-repeat;
+        // background-size: contain;
+
+        #logo-symbol { fill: white; }
+        #superellipse { fill: @gray-darker; }
+
+        +#app-name { margin-left: .2em; }
+    }
+
+    #app-name {
+        .brand-type();
+        color: @gray-darker;
+        margin: 0;
+    }
+}
+
+
+
+//``````````````````````````````
+//  Appstore buttons
+//
+.store-buttons( @scale: 1 ) {
+    position: absolute;
+    z-index: 20;
+    right: 36px * @scale;
+    top: 36px * @scale;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    li {
+        list-style: none;
+
+        a {
+            display: block;
+            width: 150px * @scale;
+            height: 45px * @scale;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+    
+        +li a {
+            margin-top: 24px * @scale;
+        }
+    }
+
+    #ios-app-store      a { background-image: url('../images/ios-app-store-badge.svg'); }
+    #android-play-store a { background-image: url('../images/android-play-store-badge.svg'); height: 51px * @scale; }
+}
+#store-buttons { .store-buttons( 1 ); }
+
+
+
+//``````````````````````````````
+//  Views
+//
+@homeIntroScale: .5;
+
+.view.home {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    min-width: 960px * @homeIntroScale;
+    min-height: 1334px * @homeIntroScale;
+    max-width: 1920px * @homeIntroScale;
+
+    .carousel {
+
+        >ul, .intro-app-ui, >nav { z-index: 2; }
+
+        >nav li +li { margin-left: 36px * @homeIntroScale !important; }
+
+        .carousel-hitarea {
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            top: 50%;
+            z-index: 0;
+        }
+    }
+
+    #intro {
+        .intro-iphone( 6, @homeIntroScale, 'light' );
+        
+        top: 55%;
+        width: 960px * @homeIntroScale;
+        margin-left: -960px * @homeIntroScale / 2;
+        margin-right: -960px * @homeIntroScale / 2;
+
+        .pane {
+            color: @gray-dark;
+            font-size: 48px * @homeIntroScale;
+            p { margin-top: 0; }
+        }
+
+        //  use a real phone photo
+        //  instead of wireframe
+        //
+        /*.intro-app-ui:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+
+            left: -2.1%;
+            top: -2.25%;
+            width: 103.5%;
+            height: 103.5%;
+            background: url('../images/iPhone-6-white-silver-nodisplay.png') no-repeat center;
+            background-size: 100% auto;
+
+            // left: -4%;
+            // top: -4%;
+            // width: 108%;
+            // height: 108%;
+            // background: url('../images/iPhone-5-white-silver.png') no-repeat center;
+            // background-size: auto 100%;
+        }*/
+    }
+}
+.home-view-rescaled( @scale ) {
+    min-width: 960px * @scale;
+    min-height: 1334px * @scale;
+    max-width: 1920px * @scale;
+
+    #intro {
+        .intro-iphone-6-rescale( @scale, 'light' );
+        width: 960px * @scale;
+        margin-left: -960px * @scale / 2;
+        margin-right: -960px * @scale / 2;
+
+        .pane {
+            font-size: 18px * 2 * @scale;
+        }
+    }
+}
+
+
+@phoneIntroScale: .5;
+
+.view.phone,
+.view.phone-dark,
+.view.phone-5,
+.view.phone-5-dark,
+.view.phone-4,
+.view.phone-4-dark {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .carousel {
+        z-index: 1;
+        overflow: hidden;
+
+        >nav li +li { margin-left: 24px * @phoneIntroScale; }
+    }
+
+    /*#backdrop {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    //  re-check for iPhone 6
+    //
+    #ios-statusbar {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 40px * @phoneIntroScale;
+        pointer-events: none;
+        // background: url('../images/ios7-statusbar-white.svg') no-repeat center top;
+        // background-size: 100% auto;
+    }
+
+    #intro.with-statusbar {
+        .carousel {
+            >ul { padding: ( 110px * @phoneIntroScale ) 0 0; }
+            >div { top: 56%; }
+            >nav { bottom: 5%; }
+        }
+        #ios-statusbar {
+            display: block;
+        }
+    }*/
+}
+.view.phone {
+
+    #intro { .intro-iphone( 6, @phoneIntroScale, 'light' ); .carousel { background-color: white; } }
+    #backdrop { background-color: white; }
+}
+.view.phone-dark {
+
+    #intro { .intro-iphone( 6, @phoneIntroScale, 'dark' ); .carousel { background-color: @gray-darker; } }
+    #backdrop { background-color: @gray-darker; }
+}
+.view.phone-5 {
+
+    #intro { .intro-iphone( 5, @phoneIntroScale, 'light' ); .carousel { background-color: white; } }
+    #backdrop { background-color: white; }
+}
+.view.phone-5-dark {
+
+    #intro { .intro-iphone( 5, @phoneIntroScale, 'dark' ); .carousel { background-color: @gray-darker; } }
+    #backdrop { background-color: @gray-darker; }
+}
+.view.phone-4 {
+
+    #intro { .intro-iphone( 4, @phoneIntroScale, 'light' ); .carousel { background-color: white; } }
+    #backdrop { background-color: white; }
+}
+.view.phone-4-dark {
+
+    #intro { .intro-iphone( 4, @phoneIntroScale, 'dark' ); .carousel { background-color: @gray-darker; } }
+    #backdrop { background-color: @gray-darker; }
+}
+
+
+
+//``````````````````````````````
+//  Viewport adaption
+//
+
+//  S
+//
+@media
+( max-height: 680px ),
+( max-height: 767px ) and ( max-width: 767px ) {
+    
+    #brand { .brand-size( 45px ); }
+
+    .view.home { .home-view-rescaled( .45 ); }
+    .view.home #intro .pane { font-size: 48px * .45; }
+
+    #store-buttons { .store-buttons( 1 * (.45 / .5) ); }
+
+}
+
+//  XS
+//
+@media
+( max-height: 610px ),
+( max-height: 697px ) and ( max-width: 697px ) {
+    
+    #brand { .brand-size( 40px ); }
+
+    .view.home { .home-view-rescaled( .4 ); }
+    .view.home #intro .pane { font-size: 48px * .4; }
+
+    #store-buttons { .store-buttons( 1 * (.4 / .5) ); }
+}
+
+//  XXS
+//
+@media
+( max-height: 540px ),
+( max-height: 607px ) and ( max-width: 607px ) {
+    
+    #brand { .brand-size( 30px ); top: 15px; left: 15px; }
+
+    .view.home { .home-view-rescaled( .33 ); }
+    .view.home #intro .pane { font-size: 48px * .33; }
+
+    #store-buttons { .store-buttons( 1 * (.33 / .5) ); top: 15px; right: 15px; }
+}
+
+//  XL
+//
+@media
+( min-height: 1360px ) and ( min-width: 1600px ),
+( min-height: 1600px ) {
+
+    #brand { .brand-size( 80px ); }
+
+    .view.home { .home-view-rescaled( 1 ); }
+    .view.home #intro .pane { font-size: 48px; }
+
+    #store-buttons { .store-buttons( 1.6 ); }
+}
+
+
+

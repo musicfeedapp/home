@@ -1,0 +1,10 @@
+<span>{{ label }}<b ng-if="attribute.required" class="required"> *</b></span>
+<input
+	type="date"
+	ng-model="instanceData[ attribute.name ]"
+	name="{{ attribute.name }}"
+	placeholder="{{ label }}{{ attribute.required && ' *' || '' }}"
+	title="{{ label }}{{ attribute.required && ' *' || '' }}"
+	ng-required="attribute.required"
+	class="form-control"
+>

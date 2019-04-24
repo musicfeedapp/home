@@ -1,0 +1,38 @@
+{
+  "name": "musicfeed",
+  "main": "app.js",
+  "version": "0.1.0",
+  "authors": [
+    "ips <ips@ips.re>"
+  ],
+  "license": "proprietary",
+  "homepage": "TBD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "angular-route": "~1.2.18",
+    "angular-animate": "~1.2.20",
+    "angular-google-maps": "~1.1.6",
+    "angular-loading-bar": "~0.5.0",
+    "angular-hammer": "monospaced/angular-hammer#~1.0.3",
+    "bootstrap": "~3.2.0",
+    "bootstrap-tagsinput": "~0.3.10",
+    "jquery": "~2.1.1",
+    "jquery-validate": "~1.12.0",
+    "moment-timezone": "~0.2.0",
+    "lesshat": "~3.0.2",
+    "lodash": "~2.4.1",
+    "ionicons": "~1.5.2",
+    "angular-smart-table": "*",
+    "angular-ui-select2": "~0.0.5",
+    "select2": "~3.5.1",
+    "modernizr": "~2.8.3"
+  }
+}

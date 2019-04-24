@@ -1,0 +1,14 @@
+<span>{{ label }}<b ng-if="attribute.required" class="required"> *</b></span>
+<select
+	multiple
+	ui-select2="select2Settings"
+	ng-model="selectedValue"
+	name="{{ attribute.name }}"
+	data-placeholder="{{ label }}{{ attribute.required && ' *' || '' }}"
+	title="{{ label }}{{ attribute.required && ' *' || '' }}"
+	ng-required="attribute.required"
+	class="form-control"
+>
+	<option value=""></option>
+	<option ng-repeat="choice in assocChoices" value="{{ choice.id }}">{{ choice.datetime }}</option>
+</select>

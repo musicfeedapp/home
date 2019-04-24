@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="ios7_x5F_statusbar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="640px" height="40px" viewBox="0 0 640 40" enable-background="new 0 0 640 40" xml:space="preserve">
+<path id="battery_x5F_icon_x5F_indicator" fill="#FFFFFF" d="M622,11h-39c-1.189,0-3,1.795-3,3v13c0,1.034,1.871,3,3,3h39
+	c1.145,0,3-1.825,3-3V14C625,12.827,623.094,11,622,11z M624,27c0,0.793-1.196,2-2,2h-39c-0.793,0-2-1.197-2-2V14
+	c0-0.803,1.207-2,2-2h39c0.804,0,2,1.207,2,2V27z M582,15v11c0,1.105,0.895,2,2,2h25V13h-25C582.895,13,582,13.895,582,15z M626,17
+	v7c0,0,3,0.578,3-3.5C629,16.457,626,17,626,17z"/>
+<text id="battery_x5F_text_x5F_indicator" transform="matrix(1 0 0 1 522.3532 28.9137)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">6</tspan><tspan x="13" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">6</tspan><tspan x="25.52" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">%</tspan></text>
+<text id="time" transform="matrix(1 0 0 1 272.6218 29.0328)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25">9</tspan><tspan x="14" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25">:</tspan><tspan x="21" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25">23</tspan><tspan x="49" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25"> </tspan><tspan x="56" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25">A</tspan><tspan x="73" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Medium'" font-size="25">M</tspan></text>
+<path id="wifi_x5F_signal_x5F_indicator" fill="#FFFFFF" d="M186.5,11c-4.841,0-9.222,1.966-12.39,5.143l2.121,2.121
+	C178.857,15.631,182.488,14,186.5,14c3.908,0,7.448,1.554,10.056,4.068l1.983-2.247C195.4,12.84,191.169,11,186.5,11z
+	 M182.415,24.448l4.523,4.523l3.842-4.355C189.635,23.613,188.141,23,186.5,23C184.951,23,183.531,23.544,182.415,24.448z
+	 M178.353,20.386l2.121,2.121C182.013,20.959,184.144,20,186.5,20c2.386,0,4.54,0.986,6.084,2.57l1.989-2.255
+	C192.497,18.267,189.647,17,186.5,17C183.316,17,180.435,18.295,178.353,20.386z"/>
+<text id="carrier" transform="matrix(1 0 0 1 87.6217 29.0328)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">C</tspan><tspan x="17" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">a</tspan><tspan x="30" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">rr</tspan><tspan x="46" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">i</tspan><tspan x="51" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">e</tspan><tspan x="64" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="24">r</tspan></text>
+<path id="signal_x5F_indicator" fill="#FFFFFF" d="M46.5,15c-3.038,0-5.5,2.462-5.5,5.5c0,3.038,2.462,5.5,5.5,5.5
+	s5.5-2.462,5.5-5.5C52,17.462,49.538,15,46.5,15z M46.5,25c-2.485,0-4.5-2.015-4.5-4.5c0-2.485,2.015-4.5,4.5-4.5s4.5,2.015,4.5,4.5
+	C51,22.985,48.985,25,46.5,25z M18.5,15c-3.038,0-5.5,2.462-5.5,5.5c0,3.038,2.462,5.5,5.5,5.5c3.038,0,5.5-2.462,5.5-5.5
+	C24,17.462,21.538,15,18.5,15z M32.5,15c-3.038,0-5.5,2.462-5.5,5.5c0,3.038,2.462,5.5,5.5,5.5s5.5-2.462,5.5-5.5
+	C38,17.462,35.538,15,32.5,15z M60.5,15c-3.038,0-5.5,2.462-5.5,5.5c0,3.038,2.462,5.5,5.5,5.5c3.038,0,5.5-2.462,5.5-5.5
+	C66,17.462,63.538,15,60.5,15z M60.5,25c-2.485,0-4.5-2.015-4.5-4.5c0-2.485,2.015-4.5,4.5-4.5c2.485,0,4.5,2.015,4.5,4.5
+	C65,22.985,62.985,25,60.5,25z M74.5,15c-3.038,0-5.5,2.462-5.5,5.5c0,3.038,2.462,5.5,5.5,5.5c3.038,0,5.5-2.462,5.5-5.5
+	C80,17.462,77.538,15,74.5,15z M74.5,25c-2.485,0-4.5-2.015-4.5-4.5c0-2.485,2.015-4.5,4.5-4.5c2.485,0,4.5,2.015,4.5,4.5
+	C79,22.985,76.985,25,74.5,25z"/>
+</svg>

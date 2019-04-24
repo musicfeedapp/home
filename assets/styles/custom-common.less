@@ -1,0 +1,515 @@
+/*//////////////////////////////
+
+    Elemental conventions
+
+//////////////////////////////*/
+
+html, body {
+    min-width: 320px;
+    height: 100%;
+}
+
+a {
+    &.with-icon {
+        position: relative;
+        text-align: left;
+        margin-left: 38px;
+
+        .icon {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: -38px;
+            padding-right: 6px;
+            top: 50%;
+            margin-top: -17px;
+            margin-bottom: -15px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 32px;
+            .lh-box-sizing(content-box);
+        }
+
+        &.hide-label {
+            text-indent: -9999px;
+            width: 0;
+            margin-left: 32px;
+
+            .icon {
+                text-indent: 0;
+            }
+        }
+    }
+}
+
+.nav,
+.navbar,
+form {
+    .disable-user-select;
+}
+
+form {
+    
+    >label, >input {
+        display: block;
+        margin: 24px 0;
+    }
+    
+    >label {
+        position: relative;
+        
+        //  jQuery validation
+        //  added element
+        >span.error {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: -17px 0;
+            padding: 0 6px;
+            font-size: 12px;
+            line-height: 18px;
+            white-space: nowrap;
+            color: white;
+            background: @brand-danger;
+            .border-box;
+        }
+        
+        &.submit {
+            .clear-children;
+    
+            .btn-submit {
+                float: right;
+            }
+        }
+        
+        //  custom fancy CSS checkbox
+        //  inspired by:
+        //  cssdeck.com/labs/css-checkbox-styles
+        &.checkbox {
+            cursor: pointer;
+            
+            input {
+                cursor: pointer;
+                opacity: 0;
+            }
+            
+            i {
+                border: 1px solid @gray-light;
+                .transition(border-color @ease .15s);
+                
+                font-style: normal;
+                display: inline-block;
+                vertical-align: middle;
+                margin: -.125em 0 0 -1.25em;
+                padding: 0;
+                width: 1.25em;
+                height: 1.25em;
+
+                &:after {
+                    opacity: 0;
+                    content: '';
+                    display: block;
+                    width: .6875em;
+                    height: .375em;
+                    margin: .275em;
+                    border: .125em solid @brand-success;
+                    border-top: 0;
+                    border-right: 0;
+                    .transform( rotate(-45deg) );
+                }
+            }
+            
+            /*&:hover i:after {
+                opacity: 0.3;
+            }*/
+            
+            input[type=checkbox]:focus + i {
+                border-color: @brand-primary;
+            }
+            
+            input[type=checkbox]:checked + i:after {
+                opacity: 1;
+            }
+        }
+        
+        &.toggle {
+            a {
+                cursor: pointer;
+                
+                span.active-text {
+                    display: none;
+                }
+                
+                &.active {
+                    span.inactive-text {
+                        display: none;
+                    }
+                    span.active-text {
+                        display: inline;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    //  Hack to override the ugly yellow
+    //  member agent styling of autofilled fields
+    input,
+    textarea,
+    select {
+        &, &:hover, &:focus, &:active {
+            &:-webkit-autofill {
+                -webkit-text-fill-color: @gray-dark !important;
+                -webkit-box-shadow: 0 0 0px 100px white inset;
+            }
+        }
+    }
+
+}
+
+.lh-placeholder(@gray-lighter);
+
+//  ngAnimate
+//
+[ng-view]/*,
+[ng-repeat],
+[ng-if]*/ {
+    
+    &.ng-leave {
+        .lh-animation(fadeOut .15s linear both);
+    }
+    
+    &.ng-enter {
+        .lh-animation(fadeIn .15s linear .2s both);
+    }
+
+}
+
+.lh-keyframes(~'fadeIn, from { opacity: 0; } to { opacity: 1; }');
+.lh-keyframes(~'fadeOut, from { opacity: 1; } to { opacity: 0; }');
+
+th, td {
+
+    &.edit-cell {
+        text-align: right;
+        width: 1%;
+    }
+
+    //  smart-table
+    //
+    &[st-sort] {
+        cursor: pointer;
+        
+        &.st-sort-ascent,
+        &.st-sort-descent {
+            span:after {
+                display: inline-block;
+                font-family: "Ionicons";
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                text-rendering: auto;
+                line-height: 1;
+                .antialiased;
+                margin-left: .5em;
+            }
+        }
+        
+        &.st-sort-ascent span:after {
+            content: '\f151';
+        }
+        &.st-sort-descent span:after {
+            content: '\f155';
+        }
+
+    }
+
+}
+
+.view-menu {
+    text-align: right;
+    margin-bottom: 36px;
+    .clear-children;
+
+    >a, >input {
+        display: inline-block;
+        margin-right: 24px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &.left {
+            float: left;
+        }
+    }
+
+    >a {
+        cursor: pointer;
+    }
+
+    >input {
+        margin-top: -6px;
+        margin-bottom: -6px;
+        width: 80px;
+        .lh-transition( width @ease @reflex, border-color @ease @reflex );
+
+        &:focus {
+            width: 200px;
+        }
+    }
+
+}
+
+
+
+
+
+
+/*//////////////////////////////
+
+    Framework & component overrides
+
+//////////////////////////////*/
+
+
+//``````````````````````````````
+//  Twitter Bootstrap
+//
+.btn {
+    border-width: 0;
+    
+    &:focus, &:active:focus, &.active:focus {
+        outline: 1px solid @brand-primary;
+        outline-offset: 1px;
+    }
+    
+    &:active,
+    &.active {
+        .box-shadow(none);
+    }
+    
+    &.btn-default {
+        border-width: 1px;
+    }
+}
+
+a {
+    &:focus {
+        outline: 1px solid @brand-primary;
+        outline-offset: 1px;
+    }
+}
+
+.form-control {
+    padding: 6px;
+    border-width: 1px;
+    border-color: @gray-lighter;
+    height: auto;
+    .box-shadow(none);
+    .transition(border-color @ease .15s);
+    
+    &:focus {
+        border-color: @brand-primary;
+        .box-shadow(none);
+    }
+    
+    //  jQuery validation
+    //  added class
+    &.error {
+        border-color: @brand-danger;
+    }
+
+    .lh-placeholder(@gray-lighter);
+}
+
+label {
+    font-weight: normal;
+    
+    span {
+        font-size: 12px;
+        color: mix(@gray-light, @gray-lighter);
+
+        .required {
+            font-weight: normal;
+            color: @brand-danger;
+        }
+    }
+}
+
+.radio, .checkbox {
+    padding-left: 1.25em;
+}
+
+/*.table {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                vertical-align: middle;
+            }
+        }
+    }
+}*/
+
+
+//``````````````````````````````
+//  Offcanvas navigation
+//  @see assets/js/bootstrap.yasni.offcanvas.js
+//
+
+//  offcanvas.less
+//
+/*.offcanvas {
+    display: none;
+
+    &.in {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .offcanvas-xs {
+        .offcanvas;
+    }
+}
+@media (max-width: 991px) {
+    .offcanvas-sm {
+        .offcanvas;
+    }
+}
+@media (max-width: 1199px) {
+    .offcanvas-md {
+        .offcanvas;
+    }
+}
+
+.offcanvas-lg {
+    .offcanvas;
+}
+
+.canvas-sliding {
+    .transition-multiple(top .35s, left .35s, bottom .35s, right .35s);
+}
+
+.offcanvas-clone {
+    height: 0px !important;
+    width: 0px !important;
+    overflow: hidden !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    position: absolute !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: 0px !important;
+    right: 0px !important;
+    opacity: 0 !important;
+}
+
+//  navmenu.less
+//
+.navmenu,
+.navbar-offcanvas {
+    width: @navmenu-width;
+    height: auto;
+}
+
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+    left: 0;
+    right: auto;
+}
+
+.navmenu-fixed-right,
+.navbar-offcanvas {
+    left: auto;
+    right: 0;
+}
+
+//  
+.navbar-toggle {
+    border: 0;
+    
+    .icon-bar {
+        background-color: @text-color;
+        .transition(background-color @reflex @ease);
+    }
+    
+    &:hover {
+        .icon-bar {
+            background-color: @brand-primary;
+        }
+    }
+    
+    // &:focus {
+    //  outline: 1px solid @brand-primary;
+    //  outline-offset: 1px;
+    // }
+}
+
+.canvas-sliding,
+.canvas-slid {
+    .navbar-toggle {
+        .icon-bar {
+            background-color: @brand-primary;
+        }
+    }
+}
+
+//
+.navmenu {
+    background: @gray-lighter;
+}
+
+.canvas {
+    position: relative;
+    left: 0;
+    z-index: 1;
+    min-height: 100%;
+    padding: 50px 0 0 0;
+    background: white;
+    //.lh-perspective(1000px);
+}
+
+@media (min-width: 0) {
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+
+//``````````````````````````````
+//  nProgress
+//
+#loading-bar .bar {
+    background: @brand-primary;
+    //height: 1px;
+}
+
+#loading-bar .peg {
+    //.box-shadow(@brand-primary 1px 0 6px 1px);
+    //height: 1px;
+    display: none;
+}
+
+#loading-bar-spinner .spinner-icon {
+    border-top-color:  @brand-primary;
+    border-left-color: @brand-primary;
+}
+*/

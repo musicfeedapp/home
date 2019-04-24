@@ -1,0 +1,1104 @@
+/*//////////////////////////////
+
+    App Intro
+
+//////////////////////////////*/
+
+// @import 'intro-app-ui/iphone-4.less';
+// @import 'intro-app-ui/iphone-5.less';
+// @import 'intro-app-ui/iphone-6.less';
+
+
+.intro-iphone ( @phoneVer: 6, @scale: 1, @theme: 'light' ) {
+
+    .test-theme();
+    
+    .test-theme() when ( @theme = 'light' ) {
+        @styleName: Light;
+        @textColor: @gray-dark;
+        @wireframeColor: @gray-light;
+        @wireframeBgColor: white;
+        @bulletColor: @gray-dark;
+        @itemColor: @gray-light;
+        @playerItemColor: @gray-dark;
+        @playerBgColor: @gray-darker;
+
+        .phone-intro();
+    }
+
+    .test-theme() when ( @theme = 'dark' ) {
+        @styleName: Dark;
+        @textColor: white;
+        @wireframeColor: @gray-dark;
+        @wireframeBgColor: @gray-darker;
+        @bulletColor: @gray-light;
+        @itemColor: @gray-dark;
+        @playerItemColor: @gray-darker;
+        @playerBgColor: @gray-darkest;
+
+        .phone-intro();
+    }
+
+    .phone-intro() {
+
+        .test-phone-version();
+        
+        .test-phone-version() when ( @phoneVer = 6 ) {
+            @resH: 1334px;
+            @resW: 750px;
+            @textSize: 18px;
+            @panePaddingTop: ( 60px * @scale );
+            @carouselNavBottom: 6%;
+
+            @menubarH: 9%;
+            @feedH: 91%;
+
+            @wireframeTop: 53%;
+            @wireframeW: 440px;
+            @wireframeH: 924px;
+            @wireframeCorner: 80px;
+            @wireframeDisplayTop: 49.5%;
+            @wireframeDisplayW: 388px;
+            @wireframeDisplayH: 690px;
+
+            @lockBtnW: 4px * @scale;
+            @lockBtnH: 66px * @scale;
+            @lockBtnTop: 206px * @scale;
+            @lockBtnLeft: auto; 
+            @lockBtnRight: ceil( -3px * @scale * 2 );
+
+            @muteBtnW: 4px * @scale;
+            @muteBtnH: 32px * @scale;
+            @muteBtnTop: 116px * @scale;
+            @muteBtnLeft: ceil( -3px * @scale * 2 );
+
+            @upBtnW: 4px * @scale;
+            @upBtnH: 58px * @scale;
+            @upBtnTop: 212px * @scale;
+            @upBtnLeft: ceil( -3px * @scale * 2 );
+
+            @downBtnW: 4px * @scale;
+            @downBtnH: 58px * @scale;
+            @downBtnTop: 290px * @scale;
+            @downBtnLeft: ceil( -3px * @scale * 2 );
+
+            @homeBtnW: 70px * @scale;
+            @homeBtnH: 70px * @scale;
+            @homeBtnBottom: 58px * @scale;
+            @homeBtnMargin: -35px * @scale;
+            @homeBtnBorderW: ceil( 3px * @scale );
+
+            @cameraW: 12px * @scale;
+            @cameraH: 12px * @scale;
+            @cameraTop: 26px * @scale;
+            @cameraMargin: -12px * @scale / 2;
+
+            @micW: 14px * @scale;
+            @micH: 14px * @scale;
+            @micTop: 54px * @scale;
+            @micMargin: -7px * @scale;
+            @micMarginLeft: -70px * @scale;
+
+            @receiverW: 70px * @scale;
+            @receiverH: 8px * @scale;
+            @receiverTop: 54px * @scale;
+            @receiverMargin: ( -8px * @scale / 2 ) ( -70px * @scale / 2 );
+            @receiverRadius: ceil( 4px * @scale );
+
+            @menuToggleW: 30px * @scale;
+            @menuToggleH: 21px * @scale;
+            @menuToggleMargin: 14px * @scale;
+
+            @appNameMarginLeft: -58px * @scale;
+            @appNameLineHeight: 48px * @scale;
+            @appNameFontSize: 26px * @scale;
+
+            @playerBottom: -2.3%;
+
+            @miniPlayerH: @miniPlayerHIPhone6and5;
+            @miniPlayerBtnW: 52px * @scale;
+            @miniPlayerBtnH: 52px * @scale;
+            @miniPlayerBtnMargin: ( 12px * @scale ) ( 18px * @scale );
+            @miniPlayingInfoW: 150px * @scale;
+            @miniPlayingInfoH: 26px * @scale;
+            @miniPlayingInfoMargin: ( 24px * @scale ) ( 8px * @scale );
+
+            @fullPlayingInfoMarginTop: ( 12px * @scale );
+            @fullPlayerControlMarginTop: ( 32px * @scale );
+
+            @itemH: 48%;
+            @keyFrameId: IPhone6and5;
+
+            .intro();
+        }
+        
+        .test-phone-version() when ( @phoneVer = 5 ) {
+            @resH: 1136px;
+            @resW: 640px;
+            @textSize: 16px;
+            @panePaddingTop: ( 72px * @scale );
+            @carouselNavBottom: 7%;
+
+            @menubarH: 9%;
+            @feedH: 91%;
+
+            @wireframeTop: 54%;
+            @wireframeW: 340px;
+            @wireframeH: 719px;
+            @wireframeCorner: 48px;
+            @wireframeDisplayTop: 50%;
+            @wireframeDisplayW: 300px;
+            @wireframeDisplayH: 534px;
+
+            @lockBtnW: 54px * @scale;
+            @lockBtnH: 4px * @scale;
+            @lockBtnTop: ceil( -3px * @scale * 2 );
+            @lockBtnLeft: 228px * @scale;
+            @lockBtnRight: auto;
+
+            @muteBtnW: 4px * @scale;
+            @muteBtnH: 34px * @scale;
+            @muteBtnTop: 96px * @scale;
+            @muteBtnLeft: ceil( -3px * @scale * 2 );
+
+            @upBtnW: 4px * @scale;
+            @upBtnH: 26px * @scale;
+            @upBtnTop: 164px * @scale;
+            @upBtnLeft: ceil( -3px * @scale * 2 );
+
+            @downBtnW: 4px * @scale;
+            @downBtnH: 26px * @scale;
+            @downBtnTop: 224px * @scale;
+            @downBtnLeft: ceil( -3px * @scale * 2 );
+
+            @homeBtnW: 60px * @scale;
+            @homeBtnH: 60px * @scale;
+            @homeBtnBottom: 42px * @scale;
+            @homeBtnMargin: -32px * @scale;
+            @homeBtnBorderW: ceil( 3px * @scale );
+
+            @cameraW: 12px * @scale;
+            @cameraH: 12px * @scale;
+            @cameraTop: 36px * @scale;
+            @cameraMargin: -12px * @scale / 2;
+
+            @micW: 8px * @scale;
+            @micH: 8px * @scale;
+            @micTop: 60px * @scale;
+            @micMargin: -4px * @scale;
+            @micMarginLeft: -50px * @scale;
+
+            @receiverW: 58px * @scale;
+            @receiverH: 6px * @scale;
+            @receiverTop: 60px * @scale;
+            @receiverMargin: ( -6px * @scale / 2 ) ( -58px * @scale / 2 );
+            @receiverRadius: ceil( 3px * @scale );
+
+            @menuToggleW: 20px * @scale;
+            @menuToggleH: 14px * @scale;
+            @menuToggleMargin: 14px * @scale;
+
+            @appNameMarginLeft: -48px * @scale;
+            @appNameLineHeight: 40px * @scale;
+            @appNameFontSize: 22px * @scale;
+
+            @playerBottom: -2.3%;
+
+            @miniPlayerH: @miniPlayerHIPhone6and5;
+            @miniPlayerBtnW: 44px * @scale;
+            @miniPlayerBtnH: 44px * @scale;
+            @miniPlayerBtnMargin: ( 8px * @scale ) ( 12px * @scale );
+            @miniPlayingInfoW: 100px * @scale;
+            @miniPlayingInfoH: 26px * @scale;
+            @miniPlayingInfoMargin: ( 16px * @scale ) ( 8px * @scale );
+
+            @fullPlayingInfoMarginTop: ( -4px * @scale );
+            @fullPlayerControlMarginTop: ( 12px * @scale );
+
+            @itemH: 48%;
+            @keyFrameId: IPhone6and5;
+
+
+            .intro();
+        }
+        
+        .test-phone-version() when ( @phoneVer = 4 ) {
+            @resH: 960px;
+            @resW: 640px;
+            @textSize: 16px;
+            @panePaddingTop: ( 40px * @scale );
+            @carouselNavBottom: 6%;
+
+            @menubarH: 11%;
+            @feedH: 89%;
+
+            @wireframeTop: 54%;
+            @wireframeW: 340px;
+            @wireframeH: 660px;
+            @wireframeCorner: 48px;
+            @wireframeDisplayTop: 50%;
+            @wireframeDisplayW: 300px;
+            @wireframeDisplayH: 450px;
+
+            @lockBtnW: 54px * @scale;
+            @lockBtnH: 4px * @scale;
+            @lockBtnTop: ceil( -3px * @scale * 2 );
+            @lockBtnLeft: 228px * @scale;
+            @lockBtnRight: auto;
+
+            @muteBtnW: 4px * @scale;
+            @muteBtnH: 34px * @scale;
+            @muteBtnTop: 96px * @scale;
+            @muteBtnLeft: ceil( -3px * @scale * 2 );
+
+            @upBtnW: 4px * @scale;
+            @upBtnH: 26px * @scale;
+            @upBtnTop: 164px * @scale;
+            @upBtnLeft: ceil( -3px * @scale * 2 );
+
+            @downBtnW: 4px * @scale;
+            @downBtnH: 26px * @scale;
+            @downBtnTop: 224px * @scale;
+            @downBtnLeft: ceil( -3px * @scale * 2 );
+
+            @homeBtnW: 60px * @scale;
+            @homeBtnH: 60px * @scale;
+            @homeBtnBottom: 48px * @scale;
+            @homeBtnMargin: -32px * @scale;
+            @homeBtnBorderW: ceil( 3px * @scale );
+
+            @cameraW: 12px * @scale;
+            @cameraH: 12px * @scale;
+            @cameraTop: 36px * @scale;
+            @cameraMargin: -12px * @scale / 2;
+
+            @micW: 8px * @scale;
+            @micH: 8px * @scale;
+            @micTop: 60px * @scale;
+            @micMargin: -4px * @scale;
+            @micMarginLeft: -50px * @scale;
+
+            @receiverW: 58px * @scale;
+            @receiverH: 6px * @scale;
+            @receiverTop: 60px * @scale;
+            @receiverMargin: ( -6px * @scale / 2 ) ( -58px * @scale / 2 );
+            @receiverRadius: ceil( 3px * @scale );
+
+            @menuToggleW: 20px * @scale;
+            @menuToggleH: 14px * @scale;
+            @menuToggleMargin: 14px * @scale;
+
+            @appNameMarginLeft: -48px * @scale;
+            @appNameLineHeight: 40px * @scale;
+            @appNameFontSize: 22px * @scale;
+
+            @playerBottom: -2.3%;
+
+            @miniPlayerH: @miniPlayerHIPhone4;
+            @miniPlayerBtnW: 44px * @scale;
+            @miniPlayerBtnH: 44px * @scale;
+            @miniPlayerBtnMargin: ( 8px * @scale ) ( 12px * @scale );
+            @miniPlayingInfoW: 100px * @scale;
+            @miniPlayingInfoH: 26px * @scale;
+            @miniPlayingInfoMargin: ( 16px * @scale ) ( 8px * @scale );
+
+            @fullPlayingInfoMarginTop: ( -28px * @scale );
+            @fullPlayerControlMarginTop: ( 8px * @scale );
+
+            @itemH: 56%;
+            @keyFrameId: IPhone4;
+
+            .intro();
+        }
+
+        .intro() {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: ( -@resH * @scale / 2 ) ( -@resW * @scale / 2 );
+            width:  (  @resW * @scale );
+            height: ( @resH * @scale );
+            .disable-user-select;
+            
+            //  frames in the moveable strip
+            //  mostly text
+            //
+            .pane {
+                padding: @panePaddingTop 0 0;
+                font-size: @textSize * 2 * @scale;
+                text-align: center;
+                color: @textColor;
+
+                p {
+                    white-space: pre-line;
+                    margin: 0;
+                /*}
+
+                &:nth-child(n+2) p {*/
+                    margin-top: @font-size-base * @line-height-base / 2;
+                }
+            }
+
+            //  bulleted nav indicator
+            //
+            .carousel {
+
+                >nav {
+                    bottom: @carouselNavBottom;
+                    height: 12px * @scale;
+                    margin: ( -6px * @scale ) 0;
+
+                    li {
+                        width: 12px * @scale;
+                        background-color: @wireframeColor;
+
+                        i { background-color: @bulletColor; }
+                    }
+                }
+            }
+
+            //  fixed phone wireframe
+            //
+            .intro-app-ui {
+                top: @wireframeTop;
+                width: @wireframeW * @scale;
+                height: @wireframeH * @scale;
+                margin: ( -@wireframeH * @scale / 2 ) ( -@wireframeW * @scale / 2 );
+                border: ceil( 3px * @scale ) solid @wireframeColor;
+                background-color: @wireframeBgColor;
+                .lh-border-radius( @wireframeCorner * @scale );
+                // pointer-events: none;
+                
+                #display {
+                    z-index: 1;
+                    top: @wireframeDisplayTop;
+                    overflow: hidden;
+                    width: @wireframeDisplayW * @scale;
+                    height: @wireframeDisplayH * @scale;
+                    border-style: solid;
+                    border-width: 6px * @scale;
+                    margin: ( ( -@wireframeDisplayH - 12px ) * @scale / 2 ) ( ( -@wireframeDisplayW - 12px ) * @scale / 2 );
+                    .lh-box-sizing( content-box );
+                    .lh-border-radius( 5px * @scale );
+                    .enable-hardware-acceleration;
+
+                    background-color: @wireframeBgColor;
+                    border-color: @wireframeBgColor;
+                    .lh-box-shadow( 0 0 0 ceil( 1px * @scale ) fade( @wireframeColor, ( min( 100%, 100% * @scale ) ) ) );
+                }
+                
+                &, #lock-button, #mute-button, #up-button, #down-button, #home-button, #camera, #mic, #receiver, #display {
+                    position: absolute;
+                    left: 50%;
+                }
+
+                #lock-button {
+                    width: @lockBtnW;
+                    height: @lockBtnH;
+                    top: @lockBtnTop;
+                    left: @lockBtnLeft;
+                    right: @lockBtnRight;
+                    background-color: @wireframeColor;
+                }
+
+                #mute-button {
+                    width: @muteBtnW;
+                    height: @muteBtnH;
+                    top: @muteBtnTop;
+                    left: @muteBtnLeft;
+                    background-color: @wireframeColor;
+                }
+
+                #up-button {
+                    width: @upBtnW;
+                    height: @upBtnH;
+                    top: @upBtnTop;
+                    left: @upBtnLeft;
+                    background-color: @wireframeColor;
+                }
+
+                #down-button {
+                    width: @downBtnW;
+                    height: @downBtnH;
+                    top: @downBtnTop;
+                    left: @downBtnLeft;
+                    background-color: @wireframeColor;
+                }
+
+                #home-button {
+                    width: @homeBtnW;
+                    height: @homeBtnH;
+                    bottom: @homeBtnBottom;
+                    margin: @homeBtnMargin;
+                    border: @homeBtnBorderW solid @wireframeColor;
+                    .lh-border-radius( 100% );
+                }
+
+                #camera {
+                    width: @cameraW;
+                    height: @cameraH;
+                    top: @cameraTop;
+                    margin: @cameraMargin;
+                    background-color: @wireframeColor;
+                    .lh-border-radius( 100% );
+                }
+                
+                #mic {
+                    width: @micW;
+                    height: @micH;
+                    top: @micTop;
+                    margin: @micMargin;
+                    margin-left: @micMarginLeft;
+                    background-color: @wireframeColor;
+                    .lh-border-radius( ceil( 7px * @scale ) );
+                }
+                
+                #receiver {
+                    width: @receiverW;
+                    height: @receiverH;
+                    top: @receiverTop;
+                    margin: @receiverMargin;
+                    background-color: @wireframeColor;
+                    .lh-border-radius( @receiverRadius );
+                }
+            }
+
+            //  animated graphic app UI
+            //
+            #menubar {
+                height: @menubarH;
+
+                #menu-toggle {
+                    width: @menuToggleW;
+                    height: @menuToggleH;
+                    margin: @menuToggleMargin;
+                    float: left;
+
+                    svg {
+                        display: block;
+                    }
+
+                    rect {
+                        fill: @itemColor;
+                    }
+                }
+
+                #app-name {
+                    .brand-type();
+                    float: left;
+                    width: 100%;
+                    margin-left: @appNameMarginLeft;
+                    line-height: @appNameLineHeight;
+                    font-size: @appNameFontSize;
+                    color: @itemColor;
+                    text-align: center;
+                }
+            }
+
+            #feed {
+                height: @feedH;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+
+                li {
+                    display: block;
+                    overflow: hidden;
+                    height: @itemH;
+
+                    &.new {
+                        .lh-animation( ~"incomingTrack@{keyFrameId}" .5s cubic-bezier( 0, .4, .6, 1 ) both );
+                        &.ng-leave { .lh-animation( none ); }
+                    }
+                    &.new-red {
+                        .track-imagery, .track-info .lines i              { .lh-animation( ~"incomingTrackRedBgColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                        .track-info .avatar path, .track-info .heart path { .lh-animation( ~"incomingTrackRedFillColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                    }
+                    &.new-green {
+                        .track-imagery, .track-info .lines i              { .lh-animation( ~"incomingTrackGreenBgColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                        .track-info .avatar path, .track-info .heart path { .lh-animation( ~"incomingTrackGreenFillColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                    }
+                    &.new-yellow {
+                        .track-imagery, .track-info .lines i              { .lh-animation( ~"incomingTrackYellowBgColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                        .track-info .avatar path, .track-info .heart path { .lh-animation( ~"incomingTrackYellowFillColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                    }
+                    &.new-blue {
+                        .track-imagery, .track-info .lines i              { .lh-animation( ~"incomingTrackBlueBgColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                        .track-info .avatar path, .track-info .heart path { .lh-animation( ~"incomingTrackBlueFillColor@{styleName}" .715s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                    }
+
+                    &.dispose-add { .lh-animation( ~"outgoingTrack@{keyFrameId}" .5s cubic-bezier( 0, .4, .6, 1 ) both ); }
+                    
+                    &.scrolling { margin-top: ~"@{twoTracksToScroll@{keyFrameId}}"; }
+                    &.scrolling-add { .lh-animation( ~"digFeedByTwo@{keyFrameId}" 1.2s cubic-bezier( 0, .6, .3, 1 ) both ); }
+                    
+                    &.scrolling-one { margin-top: ~"@{oneTracksToScroll@{keyFrameId}}"; }
+                    &.scrolling-one-add { .lh-animation( ~"digFeedByOne@{keyFrameId}" .6s cubic-bezier( 0, .6, .3, 1 ) both ); }
+
+                    .track-imagery {
+                        position: relative;
+                        height: 68%;
+                        background-color: @itemColor;
+                        
+                        // background-image: url('../images/intro-track-imagery-pattern.svg');
+                        // background-repeat: repeat;
+                        // background-position: center top;
+                        // background-size: auto 100%;
+
+                        .play {
+                            position: absolute;
+                            left: 53%;
+                            top: 50%;
+                            width: 50px * @playTapScale * @scale;
+                            height: 50px * @playTapScale * @scale;
+                            margin: -25px * @playTapScale * @scale;
+                            .lh-transform( scale( 1 / @playTapScale ) );
+                            background: url('../images/intro-play-btn.svg') no-repeat center top;
+                            background-size: 100% auto;
+                            visibility: hidden;
+
+                            &.click-add-active { visibility: visible; }
+                            &.click-add { .lh-animation( triggerTapPlay .6s cubic-bezier( .2, .2, .2, 1 ) both ); }
+
+                            polygon {
+                                fill: white;
+                            }
+                        }
+
+                        .remove {
+                            position: absolute;
+                            width: 36%;
+                            height: 100%;
+                            top: 0;
+                            right: 0;
+                            background-color: @brand-primary;
+                            visibility: hidden;
+
+                            &.swiped, &.swiped-remove-active { visibility: visible; }
+                            &.swiped-add { .lh-animation( swipeRemove .2s cubic-bezier( .4, .4, .5, .9 ) both ); }
+                            &.swiped-remove { .lh-animation( retreatRemove .2s cubic-bezier( .4, .4, .5, .9 ) both ); }
+
+                            i, b {
+                                display: block;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                width: 50px * @scale;
+                                height: 50px * @scale;
+                                margin: -25px * @scale;
+                                background: url('../images/intro-trash.svg') no-repeat center;
+                                background-size: 100% auto;
+                            }
+
+                            b {
+                                z-index: 1;
+                                width: 50px * @scale * @tapScale;
+                                height: 50px * @scale * @tapScale;
+                                margin: -25px * @scale * @tapScale;
+                                visibility: hidden;
+                            }
+
+                            b.click-add-active { visibility: visible; }
+                            b.click-add { .lh-animation( triggerTap .6s cubic-bezier( .2, .2, .2, 1 ) both ); }
+
+                        }
+                    }
+
+                    // &:nth-child( 1 ) .track-info .avatar { background-color: pink; }
+                    // &:nth-child( 2 ) .track-info .avatar { background-color: green; }
+                    // &:nth-child( 3 ) .track-info .avatar { background-color: yellow; }
+
+                    .track-info {
+                        height: 32%; //66px * @scale;
+                        position: relative;
+
+                        .avatar {
+                            float: left;
+                            width: 46px * @scale;
+                            height: 46px * @scale;
+                            margin: ( 10px * @scale ) ( 16px * @scale );
+                            // background: url('../images/intro-avatar.svg') no-repeat center top;
+                            // background-size: 100% auto;
+
+                            svg {
+                                display: block;
+                            }
+
+                            path {
+                                fill: @itemColor;
+                            }
+                        }
+
+                        .lines {
+                            float: left;
+                            width: 150px * @scale;
+                            height: 26px * @scale;
+                            margin: ( 20px * @scale ) ( 4px * @scale );
+
+                            i {
+                                display: block;
+                                height: 10px * @scale;
+                                background-color: @itemColor;
+
+                                &:nth-child(2) {
+                                    margin-top: 6px * @scale;
+                                    width: 60%;
+                                }
+                            }
+                        }
+
+                        .heart {
+                            position: absolute;
+                            right: 20px * @scale;
+                            top: 20px * @scale;
+                            width: 26px * @scale;
+                            height: 26px * @scale;
+                            // background: url('../images/intro-heart-outline.svg') no-repeat center;
+                            // background-size: 100% auto;
+
+                            svg {
+                                display: block;
+                            }
+
+                            path {
+                                fill: @itemColor;
+                            }
+
+                            i, b {
+                                display: block;
+                                position: absolute;
+                                z-index: 1;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: url('../images/intro-heart.svg') no-repeat center;
+                                background-size: 100% auto;
+                                visibility: hidden;
+                            }
+
+                            b {
+                                z-index: 1;
+                                height: 100% * @heartTapScale;
+                                width: 100% * @heartTapScale;
+                                margin: ( 100% - ( 100 * @heartTapScale ) ) / 2;
+                            }
+
+                            i.loved,
+                            i.loved-remove-active,
+                            b.beat-add-active { visibility: visible; }
+
+                            i.loved-remove { .lh-animation( fadeOut .2s @ease both ); }
+                            b.beat-add { .lh-animation( triggerTapHeart .6s cubic-bezier( .2, .2, .2, 1 ) both ); }
+
+                        }
+                    }
+                }
+            }
+
+            #player {
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                bottom: @playerBottom;
+                height: @miniPlayerH;
+                width: 100%;
+                background-color: @playerBgColor;
+                visibility: hidden;
+
+                &.visible, &.visible-remove-active { visibility: visible; }
+                &.visible-add { .lh-animation( popUpPlayer .3s linear both ); }
+                &.visible-remove { .lh-animation( popDownPlayer .15s cubic-bezier( .6, 0, 1, .4 ) both ); }
+                
+                &.full, &.full-remove-active {
+                    height: @feedH - @playerBottom;
+                    #track-video, #full-player-playing-info, #full-player-control { visibility: visible; }
+                    #track-video { height: 44%; }
+                    #mini-player-control { .lh-transform( translateY( -100% ) ); opacity: 0; }
+                    #full-player-playing-info, #full-player-control { .lh-transform( translateY( 0 ) ); opacity: 1; }
+                }
+                &.full-add {
+                    .lh-animation( ~"maximizePlayer@{keyFrameId}" .5s cubic-bezier( 0, .4, .4, 1 ) both );
+                    #track-video { .lh-animation( maximizeVideo .5s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                    #mini-player-control { .lh-animation( hideMiniPlayerControl .5s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                    #full-player-playing-info { .lh-animation( showFullPlayerControl .4s cubic-bezier( 0, .4, .4, 1 ) .1s both ); }
+                    #full-player-control { .lh-animation( showFullPlayerControl .3s cubic-bezier( 0, .4, .4, 1 ) .2s both ); }
+                }
+                &.full-remove {
+                    .lh-animation( ~"minimizePlayer@{keyFrameId}" .5s cubic-bezier( 0, .4, .4, 1 ) both );
+                    #track-video { .lh-animation( minimizeVideo .5s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                    #mini-player-control { .lh-animation( showMiniPlayerControl .5s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                    #full-player-playing-info { .lh-animation( hideFullPlayerControl .4s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                    #full-player-control { .lh-animation( hideFullPlayerControl .3s cubic-bezier( 0, .4, .4, 1 ) both ); }
+                }
+
+                &.visible-remove.full-remove { .lh-animation( ~"popDownFullPlayer@{keyFrameId}" .25s cubic-bezier( .6, 0, 1, .4 ) both ); }
+
+                #track-video {
+                    position: relative;
+                    z-index: 1;
+                    background-color: @playerBgColor;
+                    overflow: hidden;
+                    visibility: hidden;
+                    height: 0;
+
+                    >div {
+                        width: 100%;
+                        height: 0;
+                        padding-top: 75%;
+                        position: relative;
+                    }
+
+                    video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        background-color: @playerBgColor;
+                    }
+                }
+
+                #player-progress-bar {
+                    position: relative;
+                    z-index: 1;
+                    height: 6px * @scale;
+                    margin: ( -3px * @scale ) 0;
+                    background-color: @playerItemColor;
+
+                    #play-progress {
+                        height: 100%;
+                        background-color: @brand-primary;
+                        visibility: hidden;
+                        .lh-transform-origin( 0 );
+
+                        &.playing { visibility: visible; }
+                        &.playing-add { .lh-animation( playProgress 12s linear both ); }
+                    }
+                }
+
+                #mini-player-control {
+                    position: relative;
+                    .clear-children;
+                }
+
+                #mini-player-btn {
+                    float: left;
+                    width: @miniPlayerBtnW;
+                    height: @miniPlayerBtnH;
+                    margin: @miniPlayerBtnMargin;
+                    background: url('../images/intro-pause-btn.svg') no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                #mini-playing-info {
+                    float: left;
+                    width: @miniPlayingInfoW;
+                    height: @miniPlayingInfoH;
+                    margin: @miniPlayingInfoMargin;
+
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        height: 10px * @scale;
+                        background-color: @playerItemColor;
+                    }
+
+                    &:after {
+                        margin-top: 6px * @scale;
+                        width: 60%;
+                    }
+                }
+
+                #full-player-playing-info {
+                    width: 70%;
+                    height: 44px * @scale;
+                    margin: @fullPlayingInfoMarginTop auto 0;
+                    visibility: hidden;
+
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        height: 16px * @scale;
+                        background-color: @playerItemColor;
+                        width: 90%;
+                    }
+
+                    &:after {
+                        margin-top: 12px * @scale;
+                        width: 55%;
+                    }
+                }
+
+                #full-player-control {
+                    margin: @fullPlayerControlMarginTop auto 0;
+                    width: 70%;
+                    height: 120px * @scale;
+                    visibility: hidden;
+
+                    #full-player-prev,
+                    #full-player-next,
+                    #full-player-btn {
+                        float: left;
+                        width: 15%;
+                        height: 100%;
+                        background: url('../images/intro-skip-backward.svg') no-repeat center;
+                        background-size: 100% auto;
+                    }
+                    #full-player-next {
+                        background-image: url('../images/intro-skip-forward.svg');
+                    }
+
+                    #full-player-btn {
+                        width: 70%;
+                        background: url('../images/intro-pause-btn.svg') no-repeat center;
+                        background-size: auto 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.intro-iphone-6-rescale ( @scale: 1, @theme: 'light' ) {
+
+    .test-theme();
+    
+    .test-theme() when ( @theme = 'light' ) {
+        @wireframeColor: @gray-lighter;
+        .intro();
+    }
+
+    .test-theme() when ( @theme = 'dark' ) {
+        @wireframeColor: @gray-dark;
+        .intro();
+    }
+
+    .intro() {
+        margin: ( -1334px * @scale / 2 ) ( -750px * @scale / 2 );
+        width:  (  750px * @scale );
+        height: ( 1334px * @scale );
+        
+        .pane {
+            padding: ( 60px * @scale ) 0 0;
+            font-size: 16px * 2 * @scale;
+        }
+
+        .carousel >nav {
+            height: 12px * @scale;
+            margin: ( -6px * @scale ) 0;
+
+            li { width: 12px * @scale; }
+            li +li { margin-left: 24px * @scale; }
+        }
+
+        .intro-app-ui {
+            width: 440px * @scale;
+            height: 924px * @scale;
+            margin: ( -924px * @scale / 2 ) ( -440px * @scale / 2 );
+            border: ceil( 3px * @scale ) solid @wireframeColor;
+            .lh-border-radius( 80px * @scale );
+            
+            #display {
+                width: 388px * @scale;
+                height: 690px * @scale;
+                border-width: 6px * @scale;
+                margin: ( ( -690px - 12px ) * @scale / 2 ) ( ( -388px - 12px ) * @scale / 2 );
+                .lh-border-radius( 5px * @scale );
+
+                .app-ui-display-style();
+
+                .app-ui-display-style() when ( @theme = 'light' ) {
+                    .lh-box-shadow( 0 0 0 ceil( 1px * @scale ) fade( @wireframeColor, ( min( 100%, 100% * @scale ) ) ) );
+                }
+
+                .app-ui-display-style() when ( @theme = 'dark' ) {
+                    .lh-box-shadow( 0 0 0 ceil( 1px * @scale ) fade( @wireframeColor, ( min( 100%, 100% * @scale ) ) ) );
+                }
+            }
+
+            #lock-button {
+                width: 4px * @scale;
+                height: 66px * @scale;
+                top: 206px * @scale;
+                right: ceil( -3px * @scale * 2 );
+            }
+
+            #mute-button {
+                width: 4px * @scale;
+                height: 32px * @scale;
+                top: 116px * @scale;
+                left: ceil( -3px * @scale * 2 );
+            }
+
+            #up-button {
+                width: 4px * @scale;
+                height: 58px * @scale;
+                top: 212px * @scale;
+                left: ceil( -3px * @scale * 2 );
+            }
+
+            #down-button {
+                width: 4px * @scale;
+                height: 58px * @scale;
+                top: 290px * @scale;
+                left: ceil( -3px * @scale * 2 );
+            }
+
+            #home-button {
+                width: 70px * @scale;
+                height: 70px * @scale;
+                bottom: 58px * @scale;
+                margin: -35px * @scale;
+                border: ceil( 3px * @scale ) solid @wireframeColor;
+            }
+
+            #camera {
+                width: 12px * @scale;
+                height: 12px * @scale;
+                top: 26px * @scale;
+                margin: -5px * @scale;
+            }
+            
+            #mic {
+                width: 14px * @scale;
+                height: 14px * @scale;
+                top: 54px * @scale;
+                margin: -7px * @scale;
+                margin-left: -70px * @scale;
+                .lh-border-radius( ceil( 7px * @scale ) );
+            }
+            
+            #receiver {
+                width: 70px * @scale;
+                height: 8px * @scale;
+                top: 54px * @scale;
+                margin: ( -8px * @scale / 2 ) ( -70px * @scale / 2 );
+                .lh-border-radius( ceil( 4px * @scale ) );
+            }
+        }
+
+        //  animated graphic app UI
+        //
+        #menubar {
+            #menu-toggle {
+                width: 30px * @scale;
+                height: 21px * @scale;
+                margin: 14px * @scale;
+            }
+
+            #app-name {
+                margin-left: -58px * @scale;
+                line-height: 48px * @scale;
+                font-size: 26px * @scale;
+            }
+        }
+
+        #feed {
+            li {
+                .track-imagery {
+
+                    .play {
+                        width: 50px * @playTapScale * @scale;
+                        height: 50px * @playTapScale * @scale;
+                        margin: -25px * @playTapScale * @scale;
+                    }
+
+                    .remove {
+                        i, b {
+                            width: 50px * @scale;
+                            height: 50px * @scale;
+                            margin: -25px * @scale;
+                        }
+
+                        b {
+                            width: 50px * @scale * @tapScale;
+                            height: 50px * @scale * @tapScale;
+                            margin: -25px * @scale * @tapScale;
+                        }
+
+                    }
+                }
+
+                .track-info {
+                    .avatar {
+                        width: 46px * @scale;
+                        height: 46px * @scale;
+                        margin: ( 10px * @scale ) ( 16px * @scale );
+                    }
+
+                    .lines {
+                        width: 150px * @scale;
+                        height: 26px * @scale;
+                        margin: ( 20px * @scale ) ( 4px * @scale );
+
+                        i {
+                            height: 10px * @scale;
+
+                            &:nth-child(2) {
+                                margin-top: 6px * @scale;
+                            }
+                        }
+                    }
+
+                    .heart {
+                        right: 20px * @scale;
+                        top: 20px * @scale;
+                        width: 26px * @scale;
+                        height: 26px * @scale;
+                    }
+                }
+            }
+        }
+
+        #player {
+            #player-progress-bar {
+                height: 6px * @scale;
+                margin: ( -3px * @scale ) 0;
+            }
+
+            #mini-player-control {
+                height: 60px * @scale;
+            }
+
+            #mini-player-btn {
+                width: 52px * @scale;
+                height: 52px * @scale;
+                margin: ( 12px * @scale ) ( 18px * @scale );
+            }
+
+            #mini-playing-info {
+                width: 150px * @scale;
+                height: 26px * @scale;
+                margin: ( 24px * @scale ) ( 8px * @scale );
+
+                &:before, &:after {
+                    height: 10px * @scale;
+                }
+
+                &:after {
+                    margin-top: 6px * @scale;
+                }
+            }
+
+            #full-player-playing-info {
+                height: 44px * @scale;
+                margin: ( 12px * @scale ) auto 0;
+
+                &:before, &:after {
+                    height: 16px * @scale;
+                }
+
+                &:after {
+                    margin-top: 12px * @scale;
+                }
+            }
+
+            #full-player-control {
+                margin: ( 32px * @scale ) auto 0;
+                height: 120px * @scale;
+            }
+        }
+    }
+}

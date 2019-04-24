@@ -1,0 +1,12 @@
+w# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    ips -- dev,
+    tyrone tranmer -- pm
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

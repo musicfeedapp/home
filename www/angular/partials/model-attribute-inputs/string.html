@@ -1,0 +1,11 @@
+<span>{{ label }}<b ng-if="attribute.required" class="required"> *</b></span>
+<input
+	type="text"
+	ng-model="instanceData[ attribute.name ]"
+	name="{{ attribute.name }}"
+	placeholder="{{ label }}{{ attribute.required && ' *' || '' }}"
+	title="{{ label }}{{ attribute.required && ' *' || '' }}"
+	ng-required="attribute.required"
+	ng-disabled="attribute.primaryKey"
+	class="form-control"
+>
